@@ -1,0 +1,25 @@
+:root {
+	--color-white: #e4ddc0;
+	--color-pink: #d28a81;
+	--color-brown: #4e4445;
+	--color-orange: #e7bb8e;
+
+	--font-header: 'Rye', cursive;
+	--font-base: 'Stint Ultra Condensed', serif;
+}
+
+body {
+	background-color: var(--color-white);
+	color: var(--color-brown);
+	font-family: var(--font-base);
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-header);
+}
