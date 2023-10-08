@@ -1,74 +1,102 @@
 <section>
-	<div class="overlay" />
-	<h1 class="animate">
-		<span>Welcome </span>
-		<span>to My Home!</span>
-	</h1>
+	<h1 class="text_shadows">Welcome!</h1>
 </section>
 
 <style>
+	:root {
+		--color-primary: #f6aca2;
+		--color-secondary: #f49b90;
+		--color-tertiary: #f28b7d;
+		--color-quaternary: #f07a6a;
+		--color-quinary: #ee6352;
+	}
+
 	section {
-		height: 95vh;
-		background: no-repeat 31% / cover url('../assets/barnum.jpg');
+		min-height: 100vh;
+		font-family: canada-type-gibson, sans-serif;
+		font-weight: 300;
+		font-size: 1.25rem;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
-		position: relative;
+		overflow: hidden;
+		background-color: #eff8e2;
+		display: flex;
+		align-content: center;
+		justify-content: center;
 	}
 
-	h1 {
-		z-index: 1;
-		color: rgb(255 217 217);
-		font-size: 3rem;
+	.text_shadows {
+		text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+			9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+		font-family: bungee, sans-serif;
+
+		text-transform: uppercase;
+		font-size: calc(2rem + 5vw);
+		text-align: center;
+		margin: 0;
+		color: var(--color-primary);
+		animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+		letter-spacing: 0.4rem;
 		font-weight: bolder;
-		margin-top: 40%;
 	}
 
-	h1 span {
-		text-align: left;
-		width: 100%;
-		display: block;
+	@keyframes shadows {
+		0% {
+			text-shadow: none;
+		}
+		10% {
+			text-shadow: 3px 3px 0 var(--color-secondary);
+		}
+		20% {
+			text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+		}
+		30% {
+			text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+				9px 9px var(--color-quaternary);
+		}
+		40% {
+			text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+				9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+		}
+		50% {
+			text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+				9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+		}
+		60% {
+			text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+				9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+		}
+		70% {
+			text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+				9px 9px var(--color-quaternary);
+		}
+		80% {
+			text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+		}
+		90% {
+			text-shadow: 3px 3px 0 var(--color-secondary);
+		}
+		100% {
+			text-shadow: none;
+		}
 	}
 
-	.overlay {
-		position: absolute;
-		top: 0;
-		background-color: rgba(240, 117, 179, 0.317);
-		width: 100%;
-		height: 100%;
-		backdrop-filter: blur(4 px);
-		background: rgb(2, 0, 36);
-		background: linear-gradient(
-			rgba(2, 0, 36, 1) 0%,
-			rgba(212, 72, 181, 0.3) 29%,
-			rgba(0, 209, 255, 0.3) 71%
-		);
-
-		/* background: linear-gradient(
-			180deg,
-			rgba(2, 0, 36, 1) 0%,
-			rgba(0, 209, 255, 0.3) 19%,
-			rgba(212, 72, 181, 0.3) 100%
-		); */
-	}
-
-	.animate {
-		background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
-		background-size: auto auto;
-		background-clip: border-box;
-		background-size: 00% auto;
-		color: #fff;
-		background-clip: text;
-		text-fill-color: transparent;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		animation: textclip 4s linear infinite;
-		display: inline-block;
-		font-size: 190px;
-	}
-
-	@keyframes textclip {
-		to {
-			background-position: 200% center;
+	@keyframes move {
+		0% {
+			transform: translate(0px, 0px);
+		}
+		40% {
+			transform: translate(-12px, -12px);
+		}
+		50% {
+			transform: translate(-12px, -12px);
+		}
+		60% {
+			transform: translate(-12px, -12px);
+		}
+		100% {
+			transform: translate(0px, 0px);
 		}
 	}
 </style>
